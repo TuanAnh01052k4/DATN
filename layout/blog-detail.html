@@ -1,0 +1,1613 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <!-- link front  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- link font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Demo styles -->
+    <!-- link css  -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header class=" h-16 lg:h-20">
+
+        <div class="fixed top-0 left-0 w-full py-5 z-50 bg-white h-16 lg:h-20 lg:py-0">
+            <div class="container relative">
+                <nav class="flex items-center justify-between w-full lg:border-b lg:border-gray-200">
+
+                    <span class=" open-menu cursor-pointer text-xl lg:hidden">
+                        <i class="fa-solid fa-bars"></i>
+                    </span>
+                    <div
+                        class="menu fixed px-[15px] pt-6 top-0 left-0 w-full transition-all duration-500 ease-in-out bg-white z-10 h-screen hidden lg:block lg:static lg:w-auto lg:h-auto lg:pt-0">
+                        <span class="close-menu block cursor-pointer text-2xl mb-8 lg:hidden">
+                            <i class="fa-solid fa-xmark"></i>
+                        </span>
+                        <ul class="menu-item flex flex-col gap-8 lg:py-7 lg:flex-row lg:items-center lg:gap-x-3">
+                            <li><a href="#"
+                                    class="text-[12px]/[150%] text-[#221F20] font-semibold transition duration-300 ease-in-out uppercase hover:text-[#AC2F33]">Home</a>
+                            </li>
+                            <li><a href="#"
+                                    class="text-[12px]/[150%] text-[#221F20] font-semibold transition duration-300 ease-in-out uppercase hover:text-[#AC2F33]">Shop</a>
+                            </li>
+                            <li><a href="#"
+                                    class="text-[12px]/[150%] text-[#221F20] font-semibold transition duration-300 ease-in-out uppercase hover:text-[#AC2F33]">Blogs</a>
+                            </li>
+                            <li><a href="#"
+                                    class="text-[12px]/[150%] text-[#221F20] font-semibold transition duration-300 ease-in-out uppercase hover:text-[#AC2F33]">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
+                        <a href="#" class="block">
+                            <img src="./assets/images/logo.png" class="w-[140px] h-auto object-contain" alt="">
+                        </a>
+                    </div>
+                    <div class="flex items-center">
+                        <div
+                            class="search-wrapper content-menu-bottom fixed z-[13]  top-0 left-0 w-full h-screen hidden bg-white lg:w-auto lg:block lg:h-auto lg:px-0 lg:static lg:z-auto">
+                            <div class=" mt-3 relative mx-[15px] lg:mr-5 lg:block group lg:mx-0 lg:mt-0 ">
+                                <form action=""
+                                    class=" z-[11] w-full lg:w-60 h-10 border border-gray rounded-md overflow-hidden">
+                                    <button
+                                        class="size-10 border-0 outline-0 font-thin absolute left-0 top-0 text-dark">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </button>
+                                    <input type="text"
+                                        class="pl-10 py-[15px] text-sm pr-[15px] w-full h-10 border-0 outline-0 font-light"
+                                        placeholder="Tìm kiếm sản phẩm">
+                                </form>
+                                <!-- quicksearch menu  -->
+                                <div
+                                    class="quicksearch absolute top-8 left-0 z-10 w-full lg:hidden lg:group-hover:block lg:w-[440px]">
+                                    <div class="mt-[15px] border border-gray-200 rounded-md p-6   bg-white">
+                                        <h1 class="mb-4 text-sm text-[#221F20] font-semibold">Tìm kiếm nhiều nhất</h1>
+                                        <div class="flex items-center flex-wrap gap-3 mb-4">
+                                            <a href="#"
+                                                class="block px-2 py-2 border border-gray-200 text-[12px]/[150%] rounded-tl-lg rounded-br-lg transition duration-300 ease-in-out hover:text-white hover:bg-black">Áo
+                                                polo</a>
+                                            <a href="#"
+                                                class="block px-2 py-2 border border-gray-200 text-[12px]/[150%] rounded-tl-lg rounded-br-lg transition duration-300 ease-in-out hover:text-white hover:bg-black">Đầm</a>
+                                            <a href="#"
+                                                class="block px-2 py-2 border border-gray-200 text-[12px]/[150%] rounded-tl-lg rounded-br-lg transition duration-300 ease-in-out hover:text-white hover:bg-black">Trễ
+                                                Vai</a>
+                                            <a href="#"
+                                                class="block px-2 py-2 border border-gray-200 text-[12px]/[150%] rounded-tl-lg rounded-br-lg transition duration-300 ease-in-out hover:text-white hover:bg-black">Quần
+                                                Jean</a>
+                                            <a href="#"
+                                                class="block px-2 py-2 border border-gray-200 text-[12px]/[150%] rounded-tl-lg rounded-br-lg transition duration-300 ease-in-out hover:text-white hover:bg-black">Váy
+                                                học sinh</a>
+                                            <a href="#"
+                                                class="block px-2 py-2 border border-gray-200 text-[12px]/[150%] rounded-tl-lg rounded-br-lg transition duration-300 ease-in-out hover:text-white hover:bg-black">Croptop</a>
+                                            <a href="#"
+                                                class="block px-2 py-2 border border-gray-200 text-[12px]/[150%] rounded-tl-lg rounded-br-lg transition duration-300 ease-in-out hover:text-white hover:bg-black">Áo
+                                                thun</a>
+                                        </div>
+                                        <h1 class="mb-4 text-sm text-[#221F20] font-semibold">Vừa tìm kiếm</h1>
+                                        <div class="flex items-center flex-wrap gap-3 ">
+                                            <a href="#"
+                                                class="block px-2 py-2 border border-gray-200 text-[12px]/[150%] rounded-tl-lg rounded-br-lg transition duration-300 ease-in-out hover:text-white hover:bg-black">Áo
+                                                polo</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="relative hidden lg:block">
+                                <span class="sub-top cursor-pointer text-base hover:text-gray-800 ">
+                                    <i class="fa-solid fa-headphones"></i>
+                                </span>
+                                <div
+                                    class="sub-menu transition-all duration-500 ease-in-out  absolute min-w-[255px] top-10 right-0 bg-white border border-gray rounded-md hidden z-[3]">
+                                    <div class="border-b border-gray">
+                                        <h3 class="text-sm font-semibold px-6 pt-6 pb-5 text-[#221F20]">Trợ giúp</h3>
+                                    </div>
+                                    <ul class="p-6">
+                                        <li class="group mb-6">
+                                            <a href="#"
+                                                class="flex items-center text-sm font-semibold group-hover:text-gray-800 ">
+                                                <span class="mr-3 "><i class="fa-solid fa-phone-volume"></i></span>
+                                                Hotline
+                                            </a>
+                                        </li>
+                                        <li class="group mb-6">
+                                            <a href="#"
+                                                class="flex items-center text-sm font-semibold group-hover:text-gray-800 ">
+                                                <span class="mr-3 "><i class="fa-brands fa-rocketchat"></i></span>
+                                                Live Chat
+                                            </a>
+                                        </li>
+                                        <li class="group mb-6">
+                                            <a href="#"
+                                                class="flex items-center text-sm font-semibold group-hover:text-gray-800 ">
+                                                <span class="mr-3 "><i class="fa-solid fa-arrows-rotate"></i></span>
+                                                Messenger
+                                            </a>
+                                        </li>
+                                        <li class="group mb-6">
+                                            <a href="#"
+                                                class="flex items-center text-sm font-semibold group-hover:text-gray-800 ">
+                                                <span class="mr-3 "><i class="fa-regular fa-envelope"></i></span>
+                                                Email
+                                            </a>
+                                        </li>
+                                        <li class="group ">
+                                            <a href="#"
+                                                class="flex items-center text-sm font-semibold group-hover:text-gray-800 ">
+                                                <span class="mr-3 "><i class="fa-solid fa-paw"></i></span>
+                                                Tra cứu đơn hàng
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="relative hidden lg:block">
+                                <span class="sub-top cursor-pointer text-base hover:text-gray-800 ">
+                                    <i class="fa-regular fa-user"></i>
+                                </span>
+                                <div
+                                    class="sub-menu transition-all duration-500 ease-in-out  absolute min-w-[255px] top-10 right-0 bg-white border border-gray rounded-md hidden z-[3]">
+                                    <div class="border-b border-gray">
+                                        <h3 class="text-sm font-semibold px-6 pt-6 pb-5 text-[#221F20]">Tài khoản của
+                                            tôi</h3>
+                                    </div>
+                                    <ul class="p-6">
+                                        <li class="group mb-6">
+                                            <a href="#"
+                                                class="flex items-center text-sm font-semibold group-hover:text-gray-800 ">
+                                                <span class="mr-3 "><i class="fa-regular fa-user"></i></span>
+                                                Thông tin tài khoản
+                                            </a>
+                                        </li>
+                                        <li class="group mb-6">
+                                            <a href="#"
+                                                class="flex items-center text-sm font-semibold group-hover:text-gray-800 ">
+                                                <span class="mr-3 "><i class="fa-solid fa-arrows-rotate"></i></span>
+                                                Quản lý đơn hàng
+                                            </a>
+                                        </li>
+                                        <li class="group mb-6">
+                                            <a href="#"
+                                                class="flex items-center text-sm font-semibold group-hover:text-gray-800 ">
+                                                <span class="mr-3 "><i class="fa-solid fa-location-dot"></i></span>
+                                                Sổ địa chỉ
+                                            </a>
+                                        </li>
+                                        <li class="group mb-6">
+                                            <a href="#"
+                                                class="flex items-center text-sm font-semibold group-hover:text-gray-800 ">
+                                                <span class="mr-3 "><i class="fa-solid fa-glasses"></i></span>
+                                                Sản phẩm đã xem
+                                            </a>
+                                        </li>
+                                        <li class="group mb-6">
+                                            <a href="#"
+                                                class="flex items-center text-sm font-semibold group-hover:text-gray-800 ">
+                                                <span class="mr-3 "><i class="fa-regular fa-heart"></i></span>
+                                                Sản phẩm yêu thích
+                                            </a>
+                                        </li>
+                                        <li class="group mb-6">
+                                            <a href="#"
+                                                class="flex items-center text-sm font-semibold group-hover:text-gray-800 ">
+                                                <span class="mr-3 "><i class="fa-solid fa-headphones"></i></span>
+                                                Hỏi đáp sản phẩm
+                                            </a>
+                                        </li>
+                                        <li class="group mb-6">
+                                            <a href="#"
+                                                class="flex items-center text-sm font-semibold group-hover:text-gray-800 ">
+                                                <span class="mr-3 "><i
+                                                        class="fa-regular fa-hand-point-right"></i></span>
+                                                Hỗ trợ - Mail Shop
+                                            </a>
+                                        </li>
+                                        <li class="group ">
+                                            <a href="#"
+                                                class="flex items-center text-sm font-semibold group-hover:text-gray-800 ">
+                                                <span class="mr-3 "><i
+                                                        class="fa-solid fa-arrow-right-from-bracket"></i></span>
+                                                Đăng xuất
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="relative pr-5">
+                                <span class="open-mini-cart cursor-pointer text-base hover:text-gray-800 ">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                </span>
+                                <span
+                                    class="absolute -top-1 right-0 flex justify-center items-center text-sm size-4 rounded-full bg-black text-white">2</span>
+                                <!-- Mini cart  -->
+                                <div
+                                    class="mini-cart fixed top-0 -right-full opacity-0 h-screen min-w-full lg:min-w-[390px] bg-white border border-gray-200 z-[15] transition-all duration-500 ease-in-out">
+                                    <div
+                                        class="flex items-center justify-between px-[15px]  pt-6 pb-5 border-b border-gray-200 mb-6 lg:px-6">
+                                        <h1 class="text-xl font-semibold flex items-center">Giỏ hàng
+                                            <span
+                                                class="ml-[10px] size-6 bg-black text-white text-sm rounded-full flex justify-center items-center">5</span>
+                                        </h1>
+                                        <span class="close-mini-cart cursor-pointer text-2xl">
+                                            <i class="fa-solid fa-xmark"></i>
+                                        </span>
+                                    </div>
+                                    <div class="px-6 h-main_mini_cart overflow-y-auto scrollbar mb-6 lg:mb-12">
+                                        <!-- cart item  -->
+                                        <div class="w-full h-[94px] flex gap-3 pb-4 border-b border-gray-200  mb-4  ">
+                                            <div class="w-16 h-full flex-shrink-0">
+                                                <img src="./assets/images/products/aonam2.jpg"
+                                                    class="w-full h-full object-cover" alt="">
+                                            </div>
+                                            <div class="w-full flex flex-col justify-between ">
+                                                <h3 class="text-base"><a href="#" class="text-[#373737]">Áo sơ mi
+                                                        nam</a></h3>
+                                                <div class="flex justify-between items-center">
+                                                    <span class="text-sm ">Màu sắc:
+                                                        <span class="text-[#373737]">Xanh tím than</span>
+                                                    </span>
+                                                    <span class="text-sm ">Size:
+                                                        <span>Xl</span>
+                                                    </span>
+                                                </div>
+                                                <div class="flex items-center justify-between">
+                                                    <div
+                                                        class="relative w-[74px] h-6 border border-gray-200 overflow-hidden rounded-tl-lg rounded-br-lg">
+                                                        <span
+                                                            class="absolute z-[5] cursor-pointer left-0 top-0 w-6 h-full flex justify-center items-center border border-gray-200 rounded-tl-lg rounded-br-lg active:bg-black active:text-white ">
+                                                            <i class="fa-solid fa-minus"></i>
+                                                        </span>
+                                                        <input type="number"
+                                                            class="absolute left-[50%] translate-x-[-50%] w-12 px-3 z-[3] text-center outline-0 border-0"
+                                                            value="1">
+                                                        <span
+                                                            class="absolute z-[5] cursor-pointer right-0 top-0 w-6 h-full flex justify-center items-center border border-gray-200 rounded-tl-lg rounded-br-lg active:bg-black active:text-white ">
+                                                            <i class="fa-solid fa-plus"></i>
+                                                        </span>
+                                                    </div>
+                                                    <span class="text-sm text-[#AC2F33] font-semibold ">299.000 <span
+                                                            class="underline">đ</span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="w-full h-[94px] flex gap-3 pb-4 border-b border-gray-200  mb-4  ">
+                                            <div class="w-16 h-full flex-shrink-0">
+                                                <img src="./assets/images/products/aonam2.jpg"
+                                                    class="w-full h-full object-cover" alt="">
+                                            </div>
+                                            <div class="w-full flex flex-col justify-between ">
+                                                <h3 class="text-base"><a href="#" class="text-[#373737]">Áo sơ mi
+                                                        nam</a></h3>
+                                                <div class="flex justify-between items-center">
+                                                    <span class="text-sm ">Màu sắc:
+                                                        <span class="text-[#373737]">Xanh tím than</span>
+                                                    </span>
+                                                    <span class="text-sm ">Size:
+                                                        <span>Xl</span>
+                                                    </span>
+                                                </div>
+                                                <div class="flex items-center justify-between">
+                                                    <div
+                                                        class="relative w-[74px] h-6 border border-gray-200 overflow-hidden rounded-tl-lg rounded-br-lg">
+                                                        <span
+                                                            class="absolute z-[5] cursor-pointer left-0 top-0 w-6 h-full flex justify-center items-center border border-gray-200 rounded-tl-lg rounded-br-lg active:bg-black active:text-white ">
+                                                            <i class="fa-solid fa-minus"></i>
+                                                        </span>
+                                                        <input type="number"
+                                                            class="absolute left-[50%] translate-x-[-50%] w-12 px-3 z-[3] text-center outline-0 border-0"
+                                                            value="1">
+                                                        <span
+                                                            class="absolute z-[5] cursor-pointer right-0 top-0 w-6 h-full flex justify-center items-center border border-gray-200 rounded-tl-lg rounded-br-lg active:bg-black active:text-white ">
+                                                            <i class="fa-solid fa-plus"></i>
+                                                        </span>
+                                                    </div>
+                                                    <span class="text-sm text-[#AC2F33] font-semibold ">299.000 <span
+                                                            class="underline">đ</span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="w-full h-[94px] flex gap-3 pb-4 border-b border-gray-200  mb-4  ">
+                                            <div class="w-16 h-full flex-shrink-0">
+                                                <img src="./assets/images/products/aonam2.jpg"
+                                                    class="w-full h-full object-cover" alt="">
+                                            </div>
+                                            <div class="w-full flex flex-col justify-between ">
+                                                <h3 class="text-base"><a href="#" class="text-[#373737]">Áo sơ mi
+                                                        nam</a></h3>
+                                                <div class="flex justify-between items-center">
+                                                    <span class="text-sm ">Màu sắc:
+                                                        <span class="text-[#373737]">Xanh tím than</span>
+                                                    </span>
+                                                    <span class="text-sm ">Size:
+                                                        <span>Xl</span>
+                                                    </span>
+                                                </div>
+                                                <div class="flex items-center justify-between">
+                                                    <div
+                                                        class="relative w-[74px] h-6 border border-gray-200 overflow-hidden rounded-tl-lg rounded-br-lg">
+                                                        <span
+                                                            class="absolute z-[5] cursor-pointer left-0 top-0 w-6 h-full flex justify-center items-center border border-gray-200 rounded-tl-lg rounded-br-lg active:bg-black active:text-white ">
+                                                            <i class="fa-solid fa-minus"></i>
+                                                        </span>
+                                                        <input type="number"
+                                                            class="absolute left-[50%] translate-x-[-50%] w-12 px-3 z-[3] text-center outline-0 border-0"
+                                                            value="1">
+                                                        <span
+                                                            class="absolute z-[5] cursor-pointer right-0 top-0 w-6 h-full flex justify-center items-center border border-gray-200 rounded-tl-lg rounded-br-lg active:bg-black active:text-white ">
+                                                            <i class="fa-solid fa-plus"></i>
+                                                        </span>
+                                                    </div>
+                                                    <span class="text-sm text-[#AC2F33] font-semibold ">299.000 <span
+                                                            class="underline">đ</span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="w-full h-[94px] flex gap-3 pb-4 border-b border-gray-200  mb-4  ">
+                                            <div class="w-16 h-full flex-shrink-0">
+                                                <img src="./assets/images/products/aonam2.jpg"
+                                                    class="w-full h-full object-cover" alt="">
+                                            </div>
+                                            <div class="w-full flex flex-col justify-between ">
+                                                <h3 class="text-base"><a href="#" class="text-[#373737]">Áo sơ mi
+                                                        nam</a></h3>
+                                                <div class="flex justify-between items-center">
+                                                    <span class="text-sm ">Màu sắc:
+                                                        <span class="text-[#373737]">Xanh tím than</span>
+                                                    </span>
+                                                    <span class="text-sm ">Size:
+                                                        <span>Xl</span>
+                                                    </span>
+                                                </div>
+                                                <div class="flex items-center justify-between">
+                                                    <div
+                                                        class="relative w-[74px] h-6 border border-gray-200 overflow-hidden rounded-tl-lg rounded-br-lg">
+                                                        <span
+                                                            class="absolute z-[5] cursor-pointer left-0 top-0 w-6 h-full flex justify-center items-center border border-gray-200 rounded-tl-lg rounded-br-lg active:bg-black active:text-white ">
+                                                            <i class="fa-solid fa-minus"></i>
+                                                        </span>
+                                                        <input type="number"
+                                                            class="absolute left-[50%] translate-x-[-50%] w-12 px-3 z-[3] text-center outline-0 border-0"
+                                                            value="1">
+                                                        <span
+                                                            class="absolute z-[5] cursor-pointer right-0 top-0 w-6 h-full flex justify-center items-center border border-gray-200 rounded-tl-lg rounded-br-lg active:bg-black active:text-white ">
+                                                            <i class="fa-solid fa-plus"></i>
+                                                        </span>
+                                                    </div>
+                                                    <span class="text-sm text-[#AC2F33] font-semibold ">299.000 <span
+                                                            class="underline">đ</span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="w-full h-[94px] flex gap-3 pb-4 border-b border-gray-200  mb-4  ">
+                                            <div class="w-16 h-full flex-shrink-0">
+                                                <img src="./assets/images/products/aonam2.jpg"
+                                                    class="w-full h-full object-cover" alt="">
+                                            </div>
+                                            <div class="w-full flex flex-col justify-between ">
+                                                <h3 class="text-base"><a href="#" class="text-[#373737]">Áo sơ mi
+                                                        nam</a></h3>
+                                                <div class="flex justify-between items-center">
+                                                    <span class="text-sm ">Màu sắc:
+                                                        <span class="text-[#373737]">Xanh tím than</span>
+                                                    </span>
+                                                    <span class="text-sm ">Size:
+                                                        <span>Xl</span>
+                                                    </span>
+                                                </div>
+                                                <div class="flex items-center justify-between">
+                                                    <div
+                                                        class="relative w-[74px] h-6 border border-gray-200 overflow-hidden rounded-tl-lg rounded-br-lg">
+                                                        <span
+                                                            class="absolute z-[5] cursor-pointer left-0 top-0 w-6 h-full flex justify-center items-center border border-gray-200 rounded-tl-lg rounded-br-lg active:bg-black active:text-white ">
+                                                            <i class="fa-solid fa-minus"></i>
+                                                        </span>
+                                                        <input type="number"
+                                                            class="absolute left-[50%] translate-x-[-50%] w-12 px-3 z-[3] text-center outline-0 border-0"
+                                                            value="1">
+                                                        <span
+                                                            class="absolute z-[5] cursor-pointer right-0 top-0 w-6 h-full flex justify-center items-center border border-gray-200 rounded-tl-lg rounded-br-lg active:bg-black active:text-white ">
+                                                            <i class="fa-solid fa-plus"></i>
+                                                        </span>
+                                                    </div>
+                                                    <span class="text-sm text-[#AC2F33] font-semibold ">299.000 <span
+                                                            class="underline">đ</span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <p class="text-right px-6 pb-3 mb-3 border-b border-gray-200">Tổng cộng: <span
+                                                class="text-lg font-semibold text-[#0A0A0B]">1.000.000 đ</span></p>
+                                        <div class="px-6">
+                                            <a href=""
+                                                class="block w-full py-4 bg-black border border-black uppercase font-semibold text-lg  text-center text-white transition duration-300 ease-in-out hover:bg-white hover:text-black ">Xem
+                                                giỏ hàng</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- navbar-bottom  -->
+                    <div class="fixed bottom-0 left-0 w-full z-40 pt-1 bg-white border-t border-gray-200 lg:hidden">
+                        <div class="px-[15px] w-full ">
+                            <div class="flex items-center w-max mx-auto">
+                                <div class="menu-bottom-item cursor-pointer text-center  px-4">
+                                    <span class="mb-1">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </span>
+                                    <p class="text-[12px]/[150%]">Tìm kiếm</p>
+                                </div>
+                                <div class="menu-bottom-item cursor-pointer text-center  px-4">
+                                    <span class="mb-1">
+                                        <i class="fa-solid fa-headphones"></i>
+                                    </span>
+                                    <p class="text-[12px]/[150%]">Trợ giúp</p>
+                                    <div
+                                        class="content-menu-bottom menu-animation-top fixed bottom-[50px] left-0 w-full bg-white hidden  transition-all duration-500 ease-in-out z-20">
+                                        <div class="border-b border-gray-200">
+                                            <h3
+                                                class="text-sm font-semibold pt-6 pb-5 text-[#221F20] text-left px-[15px]">
+                                                Trợ giúp</h3>
+                                        </div>
+                                        <ul class="px-[15px] py-4">
+                                            <li class="group mb-6">
+                                                <a href="#"
+                                                    class="flex items-center text-sm font-semibold group-hover:text-gray-800 ">
+                                                    <span class="mr-3 "><i class="fa-solid fa-phone-volume"></i></span>
+                                                    Hotline
+                                                </a>
+                                            </li>
+                                            <li class="group mb-6">
+                                                <a href="#"
+                                                    class="flex items-center text-sm font-semibold group-hover:text-gray-800 ">
+                                                    <span class="mr-3 "><i class="fa-brands fa-rocketchat"></i></span>
+                                                    Live Chat
+                                                </a>
+                                            </li>
+                                            <li class="group mb-6">
+                                                <a href="#"
+                                                    class="flex items-center text-sm font-semibold group-hover:text-gray-800 ">
+                                                    <span class="mr-3 "><i class="fa-solid fa-arrows-rotate"></i></span>
+                                                    Messenger
+                                                </a>
+                                            </li>
+                                            <li class="group mb-6">
+                                                <a href="#"
+                                                    class="flex items-center text-sm font-semibold group-hover:text-gray-800 ">
+                                                    <span class="mr-3 "><i class="fa-regular fa-envelope"></i></span>
+                                                    Email
+                                                </a>
+                                            </li>
+                                            <li class="group mb-6 ">
+                                                <a href="#"
+                                                    class="flex items-center text-sm font-semibold group-hover:text-gray-800 ">
+                                                    <span class="mr-3 "><i class="fa-solid fa-paw"></i></span>
+                                                    Tra cứu đơn hàng
+                                                </a>
+                                            </li>
+                                            <li class="group ">
+                                                <a href="#"
+                                                    class="flex items-center text-sm font-semibold group-hover:text-gray-800 ">
+                                                    <span class="mr-3 "><i class="fa-regular fa-comments"></i></span>
+                                                    Liên hệ
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class=" menu-bottom-item cursor-pointer text-center px-4">
+                                    <span class="mb-1">
+                                        <i class="fa-regular fa-user"></i>
+                                    </span>
+                                    <p class="text-[12px]/[150%]">Tài khoản</p>
+                                    <div
+                                        class="content-menu-bottom menu-animation-top fixed bottom-[50px] left-0 w-full bg-white hidden  transition-all duration-500 ease-in-out rounded-md z-20">
+                                        <div class="border-b border-gray-200">
+                                            <h3
+                                                class="text-sm font-semibold pt-6 pb-5 text-[#221F20] text-left px-[15px]">
+                                                Tài khoản của tôi
+                                            </h3>
+                                        </div>
+                                        <ul class="px-[15px] py-4">
+                                            <li class="group mb-6">
+                                                <a href="#"
+                                                    class="flex items-center text-sm font-semibold group-hover:text-gray-800 ">
+                                                    <span class="mr-3 "><i class="fa-regular fa-user"></i></span>
+                                                    Thông tin tài khoản
+                                                </a>
+                                            </li>
+                                            <li class="group mb-6">
+                                                <a href="#"
+                                                    class="flex items-center text-sm font-semibold group-hover:text-gray-800 ">
+                                                    <span class="mr-3 "><i class="fa-solid fa-arrows-rotate"></i></span>
+                                                    Quản lý đơn hàng
+                                                </a>
+                                            </li>
+                                            <li class="group mb-6">
+                                                <a href="#"
+                                                    class="flex items-center text-sm font-semibold group-hover:text-gray-800 ">
+                                                    <span class="mr-3 "><i class="fa-solid fa-location-dot"></i></span>
+                                                    Sổ địa chỉ
+                                                </a>
+                                            </li>
+                                            <li class="group mb-6">
+                                                <a href="#"
+                                                    class="flex items-center text-sm font-semibold group-hover:text-gray-800 ">
+                                                    <span class="mr-3 "><i class="fa-solid fa-glasses"></i></span>
+                                                    Sản phẩm đã xem
+                                                </a>
+                                            </li>
+                                            <li class="group mb-6">
+                                                <a href="#"
+                                                    class="flex items-center text-sm font-semibold group-hover:text-gray-800 ">
+                                                    <span class="mr-3 "><i class="fa-regular fa-heart"></i></span>
+                                                    Sản phẩm yêu thích
+                                                </a>
+                                            </li>
+                                            <li class="group mb-6">
+                                                <a href="#"
+                                                    class="flex items-center text-sm font-semibold group-hover:text-gray-800 ">
+                                                    <span class="mr-3 "><i class="fa-solid fa-headphones"></i></span>
+                                                    Hỏi đáp sản phẩm
+                                                </a>
+                                            </li>
+                                            <li class="group mb-6">
+                                                <a href="#"
+                                                    class="flex items-center text-sm font-semibold group-hover:text-gray-800 ">
+                                                    <span class="mr-3 "><i
+                                                            class="fa-regular fa-hand-point-right"></i></span>
+                                                    Hỗ trợ - Mail Shop
+                                                </a>
+                                            </li>
+                                            <li class="group ">
+                                                <a href="#"
+                                                    class="flex items-center text-sm font-semibold group-hover:text-gray-800 ">
+                                                    <span class="mr-3 "><i
+                                                            class="fa-solid fa-arrow-right-from-bracket"></i></span>
+                                                    Đăng xuất
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- phần chi tiết bài viết  -->
+    <section class="container mb-10  ">
+        <!-- đường dẫn của trang -->
+        <div class=" flex justify-start items-center gap-3 border-t-2 border-b-[1px] py-3  ">
+            <a href="http://">Trang chủ</a>
+            <a href="http://">-</a>
+            <a href="http://">Tin Tức</a>
+            <a href="http://">-</a>
+            <a href="http://">THE WHISPER OF CLASSY DẪN DẮT XU HƯỚNG VỚI VẺ ĐẸP SANG TRỌNG</a>
+        </div>
+        <!-- trang chủ bài viết -->
+        <div class="flex flex-col justify-between pt-[50px] lg:flex-row">
+            <!-- dang mục bên trái -->
+            <div class="px-[15px]">
+                <!-- menu danh mục khi vể mobile -->
+                <select name="" id=""
+                    class=" h-12 w-full mb-8 px-3 py-2  text-#57585A border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent block lg:hidden">
+                    <option value="">Danh mục</option>
+                    <option value="">Sự kiện thời trang</option>
+                    <option value="">Blog chia sẻ</option>
+                    <option value="">Hoạt động cộng đồng</option>
+                </select>
+                <!-- danh mục trên desktop -->
+                <div
+                    class="border w-[300px] border-gray-200 rounded-tl-[32px] rounded-br-[32px] p-10 sticky top-[100px] z-20 bg-white hidden lg:block">
+                    <div>
+                        <h1 class="text-xl font-semibold mb-8 text-dark">Danh Mục</h1>
+                        <div>
+                            <a href="#" class=" block mb-8">
+                                <p class="flex justify-between items-center">
+                                    <span>Sự kiện thời trang</span>
+                                    <span><i class="fa-solid fa-arrow-right"></i></span>
+                                </p>
+                            </a>
+                            <a href="#" class=" block mb-8 ">
+                                <p class="flex justify-between items-center ">
+                                    <span>Blog chia sẻ</span>
+                                    <span><i class="fa-solid fa-arrow-right"></i></span>
+                                </p>
+                            </a>
+                            <a href="#" class=" block ">
+                                <p class="flex justify-between items-center ">
+                                    <span>Hoạt động cộng đồng</span>
+                                    <span><i class="fa-solid fa-arrow-right"></i></span>
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- bài viết của blog  -->
+            <div class="px-[15px] mt-8 order-3 lg:order-2 ">
+                <div>
+                    <h1 class="text-[26px]/[120%] text-dark font-semibold">
+                        SÀN RUNWAY EXPRESS BÙNG NỔ VỚI 2 BẢN REMIX MỚI NHẤT CỦA CA SỸ VĂN MAI HƯƠNG
+                    </h1>
+                    <div class="mt-[5px] text-[14px]/120%">
+                        23/10/2023
+                    </div>
+                </div>
+                <p class="text-[14px]/[190%] mb-2">
+                    Tối 21/10 vừa qua, ca sĩ Văn Mai Hương đã có mặt tại Trung tâm Hội nghị Quốc Gia Hà Nội để tham dự
+                    EXPRESS_FALL/WINTER 2023 FASHION SHOW của IVY moda.
+                </p>
+                <p class="text-[14px]/[190%] mb-2">
+                    BST Express có thông điệp “Tôn vinh vẻ đẹp sang trọng không phô trương” như bày tỏ khao khát được
+                    làm việc và cống hiến không ngừng nghỉ. "Chuyến tàu tốc hành" mang tới các thiết kế đậm phong cách
+                    office core với chất liệu "thượng hạng", đồng hành cùng quý cô hiện đại tiếp tục tiến bước, vững
+                    vàng hướng tới mục tiêu và tạo ra những giá trị đích thực.
+                </p>
+                <p>
+                    <img class="my-3" src="./assets/images/products/img_page-detail.jpg" alt="">
+                </p>
+                <p class="text-[14px]/[190%] mb-2">
+                    Xuất hiện tại sự kiện, Văn Mai Hương thu hút sự chú ý của nhiều người với bộ đầm rời màu đen sang
+                    trọng , chuẩn trend thu đông 2023 của IVY moda. Nữ ca sĩ ngày càng xinh đẹp và nổi bật trên thảm đỏ.
+                </p>
+                <p>
+                    <img class="my-3" src="./assets/images/products/img_page-detail.jpg" alt="">
+                </p>
+                <p class="text-[14px]/[190%] mb-2">
+                    Văn Mai Hương còn xuất hiện với vai trò ca sĩ. Trong phần trình diễn của mình, cô nàng khiến sàn
+                    runway của show diễn Express bùng nổ với bản remix mới nhất cùng "Hương" & "Đại Minh Tinh"
+                </p>
+                <p class="text-[14px]/[190%] mb-2">
+                    Nữ ca sĩ với hit "Đại minh tinh" mặc set đầm dạ hội được đính kết thủ công hoàn toàn. Thiết kế đầm
+                    gợi cảm, cá tính nhưng vẫn tôn vinh vẻ đẹp sang trọng và kiêu sa của Văn Mai Hương.
+                </p>
+                <p class="text-[14px]/[190%] mb-2">
+                    Set váy quây cúp ngực phối cùng chân váy dài xẻ đùi cao khoe khéo vòng eo 60cm và cặp chân thon
+                    thẳng tắp của nữ ca sĩ. Lời hát hòa quyện cùng nhan sắc đỉnh cao của Văn Mai Hương được khán giả
+                    nhận xét là điểm chấm phá hoàn hảo cho show diễn.
+                </p>
+                <p>
+                    <img class="my-3" src="./assets/images/products/img_page-detail.jpg" alt="">
+                </p>
+                <p>
+                    <img class="my-4" src="./assets/images/products/detail-blog.jpg" alt="">
+                </p>
+                <p>
+                    <img class="my-3" src="./assets/images/products/img_page-detail.jpg" alt="">
+                </p>
+                <p class="text-[14px]/[190%] mb-2">
+                    Được biết, IVY moda ra mắt BST được sáng tạo xuyên suốt theo tinh thần quiet luxury - Sự sang trọng
+                    giản dị, đây là phong cách nhấn về các thiết kế tinh tế, chú trọng chất liệu, kỹ thuật may... không
+                    phô trương về logo thương hiệu hay cách xử lý đính kết kỳ công. Không chỉ phá vỡ những chi tiết cơ
+                    bản để tạo sự mới mẻ thú vị, các thiết kế còn dung hòa nét trang nhã kiêu hãnh với nhu cầu mặc tiện
+                    dụng.
+                </p>
+                <p class="text-[14px]/[190%] mb-2">
+                    BST EXPRESS đã có mặt trên tất cả hệ thống showroom IVY moda toàn quốc. Hãy đến để chạm và tự cảm
+                    nhận sự cao cấp qua từng thiết kế IVY moda gửi tới nàng nhé!
+                </p>
+            </div>
+            <!-- banner sale và tin mới nhất -->
+            <div class="w-full px-[15px] order-2 lg:order-3">
+
+                <!-- tin mới nhất  -->
+                <div class="border w-[300px] border-gray-200 rounded-tl-[32px] rounded-br-[32px] p-3 mt-10 hidden lg:block">
+                    <h1 class="text-xl font-semibold mb-8 text-dark">Tin mới nhất</h1>
+                    <div>
+                        <ul>
+                            <li class="flex items-center text-[14px]">
+                                <img class="h-[75px] w-[100px]" src="./assets/images/products/blog-tinoi.webp" alt="">
+                                <div class="pl-4">
+                                    <p>
+                                        Phong Cách Urban - Nguồn Gốc, Đặc Trưng và Những Item Nổi Bật Nhất
+                                    </p>
+                                    <p class="mt-1">21/06/2024</p>
+                                </div>
+                            </li>
+                            <li class="flex items-center text-[14px]">
+                                <img class="h-[75px] w-[100px]" src="./assets/images/products/blog-tinoi.webp" alt="">
+                                <div class="pl-4">
+                                    <p>
+                                        Phong Cách Urban - Nguồn Gốc, Đặc Trưng và Những Item Nổi Bật Nhất
+                                    </p>
+                                    <p class="mt-2">21/06/2024</p>
+                                </div>
+                            </li>
+                            <li class="flex items-center text-[14px]">
+                                <img class="h-[75px] w-[100px]" src="./assets/images/products/blog-tinoi.webp" alt="">
+                                <div class="pl-4">
+                                    <p>
+                                        Phong Cách Urban - Nguồn Gốc, Đặc Trưng và Những Item Nổi Bật Nhất
+                                    </p>
+                                    <p class="mt-2">21/06/2024</p>
+                                </div>
+                            </li>
+                            <li class="flex items-center text-[14px]">
+                                <img class="h-[75px] w-[100px]" src="./assets/images/products/blog-tinoi.webp" alt="">
+                                <div class="pl-4">
+                                    <p>
+                                        Phong Cách Urban - Nguồn Gốc, Đặc Trưng và Những Item Nổi Bật Nhất
+                                    </p>
+                                    <p class="mt-2">21/06/2024</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- banner sale -->
+                <div
+                    class=" sticky top-[100px] z-20 bg-white flex justify-center items-center border w-[300px]  border-gray-200 rounded-tl-[32px] rounded-br-[32px] mt-10">
+                    <img class=" w-[300px]  rounded-tl-[32px] rounded-br-[32px]  object-cover"
+                        src="./assets/images/products/detail-blog-sale.webp" alt="">
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <hr class="container my-10">
+    <!-- phần list sản phẩm bên dưới -->
+    <section class="newArrival mb-[18px] lg:mb-10">
+        <div class="container">
+            <h1
+                class="text-xl lg:text-3xl font-semibold text-dark tracking-[2px] text-center uppercase mb-[10px] lg:mb-5">
+                NEW
+                ARRIVAL | SALE 50% TOÀN BỘ SP</h1>
+            <div>
+                <div class="w-max mx-auto">
+                    <ul class="tabs-btn flex items-center gap-8 mb-4 lg:mb-[28px]">
+                        <li class="cursor-pointer text-dark text-base lg:text-xl pb-2 lg:pb-0 active">Mail-Shop Women
+                        </li>
+                        <li class="cursor-pointer text-dark text-base  lg:text-xl pb-2 lg:pb-0">Mail-Shop Men</li>
+                    </ul>
+                </div>
+                <div class="w-full relative">
+                    <div class="swiper myArrival">
+                        <div class="swiper-wrapper ">
+                            <div class="swiper-slide">
+                                <div>
+                                    <div class="h-[236px] lg:h-[350px] w-full relative overflow-hidden mb-4">
+                                        <a href="#" class="block w-full h-full">
+                                            <img src="./assets/images/products/ao1.jpg"
+                                                class="w-full h-full object-cover" alt="">
+                                        </a>
+                                        <span
+                                            class="absolute top-0 left-0 text-[12px]/[150%] font-semibold py-1 px-3 bg-rose-900 text-white rounded-br-full">
+                                            Best seller
+                                        </span>
+                                        <span
+                                            class="absolute size-6 lg:size-10 rounded-full top-2 right-2 text-[12px]/[150%] font-semibold bg-black text-white flex justify-center items-center">
+                                            30%
+                                        </span>
+                                    </div>
+                                    <div class="flex justify-between mb-2 lg:mb-3">
+                                        <ul class="flex items-center gap-x-[10px]">
+                                            <li
+                                                class="cursor-pointer size-4 text-white lg:size-[18px] rounded-full bg-black font-thin text-sm flex items-center justify-center">
+                                                <i class="fa-solid fa-check"></i>
+                                            </li>
+                                            <li
+                                                class="cursor-pointer size-4 text-white lg:size-[18px] rounded-full bg-black font-thin text-sm flex items-center justify-center">
+                                                <i class="fa-solid fa-check"></i>
+                                            </li>
+                                            <li
+                                                class="cursor-pointer size-4 text-white lg:size-[18px] rounded-full bg-black font-thin text-sm flex items-center justify-center">
+                                                <i class="fa-solid fa-check"></i>
+                                            </li>
+                                            <li
+                                                class="cursor-pointer size-4 text-white lg:size-[18px] rounded-full bg-black font-thin text-sm flex items-center justify-center">
+                                                <i class="fa-solid fa-check"></i>
+                                            </li>
+                                        </ul>
+                                        <span class=" cursor-pointer text-sm font-thin text-black ">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </span>
+                                    </div>
+                                    <a href="#"
+                                        class="block text-[12px]/[16px] lg:text-sm hover:text-rose-800 mb-2 lg:mb-[10px]">Sản
+                                        phẩm A</a>
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center gap-1">
+                                            <span class=" text-sm font-semibold text-dark lg:text-base">999.999đ</span>
+                                            <span
+                                                class=" text-[10px]/[150%] line-through lg:text-[12px]/[150%]">999.999đ</span>
+                                        </div>
+                                        <div class="relative btn-cart">
+                                            <button
+                                                class="card-add-to-cart size-5 text-[12px] border-dark border bg-dark rounded-tl-lg rounded-br-lg text-white transition duration-500 ease-in-out hover:bg-white lg:text-base hover:text-black lg:size-8">
+                                                <i class="fa-solid fa-cart-arrow-down"></i>
+                                            </button>
+                                            <ul
+                                                class="card-list-size w-[100px] absolute bottom-[35px] hidden transition-all duration-300 ease-in-out right-0 bg-white lg:w-[132px] border border-gray-200 z-10">
+                                                <li>
+                                                    <button
+                                                        class=" w-full text-sm py-2 text-dark font-semibold border border-white lg:text-base lg:py-3 hover:border-dark ">M</button>
+                                                </li>
+                                                <li>
+                                                    <button
+                                                        class=" w-full text-sm py-2 text-dark font-semibold border border-white lg:text-base lg:py-3 hover:border-dark ">L</button>
+                                                </li>
+                                                <li>
+                                                    <button
+                                                        class=" w-full text-sm py-2 text-dark font-semibold border border-white lg:text-base lg:py-3 hover:border-dark ">XL</button>
+                                                </li>
+                                                <li>
+                                                    <button
+                                                        class=" w-full text-sm py-2 text-dark font-semibold border border-white lg:text-base lg:py-3 hover:border-dark ">XXL</button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div>
+                                    <div class="h-[236px] lg:h-[350px] w-full relative overflow-hidden mb-4">
+                                        <a href="#" class="block w-full h-full">
+                                            <img src="./assets/images/products/ao1.jpg"
+                                                class="w-full h-full object-cover" alt="">
+                                        </a>
+                                        <span
+                                            class="absolute top-0 left-0 text-[12px]/[150%] font-semibold py-1 px-3 bg-rose-900 text-white rounded-br-full">
+                                            Best seller
+                                        </span>
+                                        <span
+                                            class="absolute size-6 lg:size-10 rounded-full top-2 right-2 text-[12px]/[150%] font-semibold bg-black text-white flex justify-center items-center">
+                                            30%
+                                        </span>
+                                    </div>
+                                    <div class="flex justify-between mb-2 lg:mb-3">
+                                        <ul class="flex items-center gap-x-[10px]">
+                                            <li
+                                                class="cursor-pointer size-4 text-white lg:size-[18px] rounded-full bg-black font-thin text-sm flex items-center justify-center">
+                                                <i class="fa-solid fa-check"></i>
+                                            </li>
+                                            <li
+                                                class="cursor-pointer size-4 text-white lg:size-[18px] rounded-full bg-black font-thin text-sm flex items-center justify-center">
+                                                <i class="fa-solid fa-check"></i>
+                                            </li>
+                                            <li
+                                                class="cursor-pointer size-4 text-white lg:size-[18px] rounded-full bg-black font-thin text-sm flex items-center justify-center">
+                                                <i class="fa-solid fa-check"></i>
+                                            </li>
+                                            <li
+                                                class="cursor-pointer size-4 text-white lg:size-[18px] rounded-full bg-black font-thin text-sm flex items-center justify-center">
+                                                <i class="fa-solid fa-check"></i>
+                                            </li>
+                                        </ul>
+                                        <span class=" cursor-pointer text-sm font-thin text-black ">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </span>
+                                    </div>
+                                    <a href="#"
+                                        class="block text-[12px]/[16px] lg:text-sm hover:text-rose-800 mb-2 lg:mb-[10px]">Sản
+                                        phẩm A</a>
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center gap-1">
+                                            <span class=" text-sm font-semibold text-dark lg:text-base">999.999đ</span>
+                                            <span
+                                                class=" text-[10px]/[150%] line-through lg:text-[12px]/[150%]">999.999đ</span>
+                                        </div>
+                                        <div class="relative btn-cart">
+                                            <button
+                                                class="card-add-to-cart size-5 text-[12px] border-dark border bg-dark rounded-tl-lg rounded-br-lg text-white transition duration-500 ease-in-out hover:bg-white lg:text-base hover:text-black lg:size-8">
+                                                <i class="fa-solid fa-cart-arrow-down"></i>
+                                            </button>
+                                            <ul
+                                                class="card-list-size w-[100px] absolute bottom-[35px] hidden transition-all duration-300 ease-in-out right-0 bg-white lg:w-[132px] border border-gray-200 z-10">
+                                                <li>
+                                                    <button
+                                                        class=" w-full text-sm py-2 text-dark font-semibold border border-white lg:text-base lg:py-3 hover:border-dark ">M</button>
+                                                </li>
+                                                <li>
+                                                    <button
+                                                        class=" w-full text-sm py-2 text-dark font-semibold border border-white lg:text-base lg:py-3 hover:border-dark ">L</button>
+                                                </li>
+                                                <li>
+                                                    <button
+                                                        class=" w-full text-sm py-2 text-dark font-semibold border border-white lg:text-base lg:py-3 hover:border-dark ">XL</button>
+                                                </li>
+                                                <li>
+                                                    <button
+                                                        class=" w-full text-sm py-2 text-dark font-semibold border border-white lg:text-base lg:py-3 hover:border-dark ">XXL</button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div>
+                                    <div class="h-[236px] lg:h-[350px] w-full relative overflow-hidden mb-4">
+                                        <a href="#" class="block w-full h-full">
+                                            <img src="./assets/images/products/ao1.jpg"
+                                                class="w-full h-full object-cover" alt="">
+                                        </a>
+                                        <span
+                                            class="absolute top-0 left-0 text-[12px]/[150%] font-semibold py-1 px-3 bg-rose-900 text-white rounded-br-full">
+                                            Best seller
+                                        </span>
+                                        <span
+                                            class="absolute size-6 lg:size-10 rounded-full top-2 right-2 text-[12px]/[150%] font-semibold bg-black text-white flex justify-center items-center">
+                                            30%
+                                        </span>
+                                    </div>
+                                    <div class="flex justify-between mb-2 lg:mb-3">
+                                        <ul class="flex items-center gap-x-[10px]">
+                                            <li
+                                                class="cursor-pointer size-4 text-white lg:size-[18px] rounded-full bg-black font-thin text-sm flex items-center justify-center">
+                                                <i class="fa-solid fa-check"></i>
+                                            </li>
+                                            <li
+                                                class="cursor-pointer size-4 text-white lg:size-[18px] rounded-full bg-black font-thin text-sm flex items-center justify-center">
+                                                <i class="fa-solid fa-check"></i>
+                                            </li>
+                                            <li
+                                                class="cursor-pointer size-4 text-white lg:size-[18px] rounded-full bg-black font-thin text-sm flex items-center justify-center">
+                                                <i class="fa-solid fa-check"></i>
+                                            </li>
+                                            <li
+                                                class="cursor-pointer size-4 text-white lg:size-[18px] rounded-full bg-black font-thin text-sm flex items-center justify-center">
+                                                <i class="fa-solid fa-check"></i>
+                                            </li>
+                                        </ul>
+                                        <span class=" cursor-pointer text-sm font-thin text-black ">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </span>
+                                    </div>
+                                    <a href="#"
+                                        class="block text-[12px]/[16px] lg:text-sm hover:text-rose-800 mb-2 lg:mb-[10px]">Sản
+                                        phẩm A</a>
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center gap-1">
+                                            <span class=" text-sm font-semibold text-dark lg:text-base">999.999đ</span>
+                                            <span
+                                                class=" text-[10px]/[150%] line-through lg:text-[12px]/[150%]">999.999đ</span>
+                                        </div>
+                                        <div class="relative btn-cart">
+                                            <button
+                                                class="card-add-to-cart size-5 text-[12px] border-dark border bg-dark rounded-tl-lg rounded-br-lg text-white transition duration-500 ease-in-out hover:bg-white lg:text-base hover:text-black lg:size-8">
+                                                <i class="fa-solid fa-cart-arrow-down"></i>
+                                            </button>
+                                            <ul
+                                                class="card-list-size w-[100px] absolute bottom-[35px] hidden transition-all duration-300 ease-in-out right-0 bg-white lg:w-[132px] border border-gray-200 z-10">
+                                                <li>
+                                                    <button
+                                                        class=" w-full text-sm py-2 text-dark font-semibold border border-white lg:text-base lg:py-3 hover:border-dark ">M</button>
+                                                </li>
+                                                <li>
+                                                    <button
+                                                        class=" w-full text-sm py-2 text-dark font-semibold border border-white lg:text-base lg:py-3 hover:border-dark ">L</button>
+                                                </li>
+                                                <li>
+                                                    <button
+                                                        class=" w-full text-sm py-2 text-dark font-semibold border border-white lg:text-base lg:py-3 hover:border-dark ">XL</button>
+                                                </li>
+                                                <li>
+                                                    <button
+                                                        class=" w-full text-sm py-2 text-dark font-semibold border border-white lg:text-base lg:py-3 hover:border-dark ">XXL</button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div>
+                                    <div class="h-[236px] lg:h-[350px] w-full relative overflow-hidden mb-4">
+                                        <a href="#" class="block w-full h-full">
+                                            <img src="./assets/images/products/ao1.jpg"
+                                                class="w-full h-full object-cover" alt="">
+                                        </a>
+                                        <span
+                                            class="absolute top-0 left-0 text-[12px]/[150%] font-semibold py-1 px-3 bg-rose-900 text-white rounded-br-full">
+                                            Best seller
+                                        </span>
+                                        <span
+                                            class="absolute size-6 lg:size-10 rounded-full top-2 right-2 text-[12px]/[150%] font-semibold bg-black text-white flex justify-center items-center">
+                                            30%
+                                        </span>
+                                    </div>
+                                    <div class="flex justify-between mb-2 lg:mb-3">
+                                        <ul class="flex items-center gap-x-[10px]">
+                                            <li
+                                                class="cursor-pointer size-4 text-white lg:size-[18px] rounded-full bg-black font-thin text-sm flex items-center justify-center">
+                                                <i class="fa-solid fa-check"></i>
+                                            </li>
+                                            <li
+                                                class="cursor-pointer size-4 text-white lg:size-[18px] rounded-full bg-black font-thin text-sm flex items-center justify-center">
+                                                <i class="fa-solid fa-check"></i>
+                                            </li>
+                                            <li
+                                                class="cursor-pointer size-4 text-white lg:size-[18px] rounded-full bg-black font-thin text-sm flex items-center justify-center">
+                                                <i class="fa-solid fa-check"></i>
+                                            </li>
+                                            <li
+                                                class="cursor-pointer size-4 text-white lg:size-[18px] rounded-full bg-black font-thin text-sm flex items-center justify-center">
+                                                <i class="fa-solid fa-check"></i>
+                                            </li>
+                                        </ul>
+                                        <span class=" cursor-pointer text-sm font-thin text-black ">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </span>
+                                    </div>
+                                    <a href="#"
+                                        class="block text-[12px]/[16px] lg:text-sm hover:text-rose-800 mb-2 lg:mb-[10px]">Sản
+                                        phẩm A</a>
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center gap-1">
+                                            <span class=" text-sm font-semibold text-dark lg:text-base">999.999đ</span>
+                                            <span
+                                                class=" text-[10px]/[150%] line-through lg:text-[12px]/[150%]">999.999đ</span>
+                                        </div>
+                                        <div class="relative btn-cart">
+                                            <button
+                                                class="card-add-to-cart size-5 text-[12px] border-dark border bg-dark rounded-tl-lg rounded-br-lg text-white transition duration-500 ease-in-out hover:bg-white lg:text-base hover:text-black lg:size-8">
+                                                <i class="fa-solid fa-cart-arrow-down"></i>
+                                            </button>
+                                            <ul
+                                                class="card-list-size w-[100px] absolute bottom-[35px] hidden transition-all duration-300 ease-in-out right-0 bg-white lg:w-[132px] border border-gray-200 z-10">
+                                                <li>
+                                                    <button
+                                                        class=" w-full text-sm py-2 text-dark font-semibold border border-white lg:text-base lg:py-3 hover:border-dark ">M</button>
+                                                </li>
+                                                <li>
+                                                    <button
+                                                        class=" w-full text-sm py-2 text-dark font-semibold border border-white lg:text-base lg:py-3 hover:border-dark ">L</button>
+                                                </li>
+                                                <li>
+                                                    <button
+                                                        class=" w-full text-sm py-2 text-dark font-semibold border border-white lg:text-base lg:py-3 hover:border-dark ">XL</button>
+                                                </li>
+                                                <li>
+                                                    <button
+                                                        class=" w-full text-sm py-2 text-dark font-semibold border border-white lg:text-base lg:py-3 hover:border-dark ">XXL</button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div>
+                                    <div class="h-[236px] lg:h-[350px] w-full relative overflow-hidden mb-4">
+                                        <a href="#" class="block w-full h-full">
+                                            <img src="./assets/images/products/ao1.jpg"
+                                                class="w-full h-full object-cover" alt="">
+                                        </a>
+                                        <span
+                                            class="absolute top-0 left-0 text-[12px]/[150%] font-semibold py-1 px-3 bg-rose-900 text-white rounded-br-full">
+                                            Best seller
+                                        </span>
+                                        <span
+                                            class="absolute size-6 lg:size-10 rounded-full top-2 right-2 text-[12px]/[150%] font-semibold bg-black text-white flex justify-center items-center">
+                                            30%
+                                        </span>
+                                    </div>
+                                    <div class="flex justify-between mb-2 lg:mb-3">
+                                        <ul class="flex items-center gap-x-[10px]">
+                                            <li
+                                                class="cursor-pointer size-4 text-white lg:size-[18px] rounded-full bg-black font-thin text-sm flex items-center justify-center">
+                                                <i class="fa-solid fa-check"></i>
+                                            </li>
+                                            <li
+                                                class="cursor-pointer size-4 text-white lg:size-[18px] rounded-full bg-black font-thin text-sm flex items-center justify-center">
+                                                <i class="fa-solid fa-check"></i>
+                                            </li>
+                                            <li
+                                                class="cursor-pointer size-4 text-white lg:size-[18px] rounded-full bg-black font-thin text-sm flex items-center justify-center">
+                                                <i class="fa-solid fa-check"></i>
+                                            </li>
+                                            <li
+                                                class="cursor-pointer size-4 text-white lg:size-[18px] rounded-full bg-black font-thin text-sm flex items-center justify-center">
+                                                <i class="fa-solid fa-check"></i>
+                                            </li>
+                                        </ul>
+                                        <span class=" cursor-pointer text-sm font-thin text-black ">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </span>
+                                    </div>
+                                    <a href="#"
+                                        class="block text-[12px]/[16px] lg:text-sm hover:text-rose-800 mb-2 lg:mb-[10px]">Sản
+                                        phẩm A</a>
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center gap-1">
+                                            <span class=" text-sm font-semibold text-dark lg:text-base">999.999đ</span>
+                                            <span
+                                                class=" text-[10px]/[150%] line-through lg:text-[12px]/[150%]">999.999đ</span>
+                                        </div>
+                                        <div class="relative btn-cart">
+                                            <button
+                                                class="card-add-to-cart size-5 text-[12px] border-dark border bg-dark rounded-tl-lg rounded-br-lg text-white transition duration-500 ease-in-out hover:bg-white lg:text-base hover:text-black lg:size-8">
+                                                <i class="fa-solid fa-cart-arrow-down"></i>
+                                            </button>
+                                            <ul
+                                                class="card-list-size w-[100px] absolute bottom-[35px] hidden transition-all duration-300 ease-in-out right-0 bg-white lg:w-[132px] border border-gray-200 z-10">
+                                                <li>
+                                                    <button
+                                                        class=" w-full text-sm py-2 text-dark font-semibold border border-white lg:text-base lg:py-3 hover:border-dark ">M</button>
+                                                </li>
+                                                <li>
+                                                    <button
+                                                        class=" w-full text-sm py-2 text-dark font-semibold border border-white lg:text-base lg:py-3 hover:border-dark ">L</button>
+                                                </li>
+                                                <li>
+                                                    <button
+                                                        class=" w-full text-sm py-2 text-dark font-semibold border border-white lg:text-base lg:py-3 hover:border-dark ">XL</button>
+                                                </li>
+                                                <li>
+                                                    <button
+                                                        class=" w-full text-sm py-2 text-dark font-semibold border border-white lg:text-base lg:py-3 hover:border-dark ">XXL</button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div>
+                                    <div class="h-[236px] lg:h-[350px] w-full relative overflow-hidden mb-4">
+                                        <a href="#" class="block w-full h-full">
+                                            <img src="./assets/images/products/ao1.jpg"
+                                                class="w-full h-full object-cover" alt="">
+                                        </a>
+                                        <span
+                                            class="absolute top-0 left-0 text-[12px]/[150%] font-semibold py-1 px-3 bg-rose-900 text-white rounded-br-full">
+                                            Best seller
+                                        </span>
+                                        <span
+                                            class="absolute size-6 lg:size-10 rounded-full top-2 right-2 text-[12px]/[150%] font-semibold bg-black text-white flex justify-center items-center">
+                                            30%
+                                        </span>
+                                    </div>
+                                    <div class="flex justify-between mb-2 lg:mb-3">
+                                        <ul class="flex items-center gap-x-[10px]">
+                                            <li
+                                                class="cursor-pointer size-4 text-white lg:size-[18px] rounded-full bg-black font-thin text-sm flex items-center justify-center">
+                                                <i class="fa-solid fa-check"></i>
+                                            </li>
+                                            <li
+                                                class="cursor-pointer size-4 text-white lg:size-[18px] rounded-full bg-black font-thin text-sm flex items-center justify-center">
+                                                <i class="fa-solid fa-check"></i>
+                                            </li>
+                                            <li
+                                                class="cursor-pointer size-4 text-white lg:size-[18px] rounded-full bg-black font-thin text-sm flex items-center justify-center">
+                                                <i class="fa-solid fa-check"></i>
+                                            </li>
+                                            <li
+                                                class="cursor-pointer size-4 text-white lg:size-[18px] rounded-full bg-black font-thin text-sm flex items-center justify-center">
+                                                <i class="fa-solid fa-check"></i>
+                                            </li>
+                                        </ul>
+                                        <span class=" cursor-pointer text-sm font-thin text-black ">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </span>
+                                    </div>
+                                    <a href="#"
+                                        class="block text-[12px]/[16px] lg:text-sm hover:text-rose-800 mb-2 lg:mb-[10px]">Sản
+                                        phẩm A</a>
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center gap-1">
+                                            <span class=" text-sm font-semibold text-dark lg:text-base">999.999đ</span>
+                                            <span
+                                                class=" text-[10px]/[150%] line-through lg:text-[12px]/[150%]">999.999đ</span>
+                                        </div>
+                                        <div class="relative btn-cart">
+                                            <button
+                                                class="card-add-to-cart size-5 text-[12px] border-dark border bg-dark rounded-tl-lg rounded-br-lg text-white transition duration-500 ease-in-out hover:bg-white lg:text-base hover:text-black lg:size-8">
+                                                <i class="fa-solid fa-cart-arrow-down"></i>
+                                            </button>
+                                            <ul
+                                                class="card-list-size w-[100px] absolute bottom-[35px] hidden transition-all duration-300 ease-in-out right-0 bg-white lg:w-[132px] border border-gray-200 z-10">
+                                                <li>
+                                                    <button
+                                                        class=" w-full text-sm py-2 text-dark font-semibold border border-white lg:text-base lg:py-3 hover:border-dark ">M</button>
+                                                </li>
+                                                <li>
+                                                    <button
+                                                        class=" w-full text-sm py-2 text-dark font-semibold border border-white lg:text-base lg:py-3 hover:border-dark ">L</button>
+                                                </li>
+                                                <li>
+                                                    <button
+                                                        class=" w-full text-sm py-2 text-dark font-semibold border border-white lg:text-base lg:py-3 hover:border-dark ">XL</button>
+                                                </li>
+                                                <li>
+                                                    <button
+                                                        class=" w-full text-sm py-2 text-dark font-semibold border border-white lg:text-base lg:py-3 hover:border-dark ">XXL</button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div>
+                                    <div class="h-[236px] lg:h-[350px] w-full relative overflow-hidden mb-4">
+                                        <a href="#" class="block w-full h-full">
+                                            <img src="./assets/images/products/ao1.jpg"
+                                                class="w-full h-full object-cover" alt="">
+                                        </a>
+                                        <span
+                                            class="absolute top-0 left-0 text-[12px]/[150%] font-semibold py-1 px-3 bg-rose-900 text-white rounded-br-full">
+                                            Best seller
+                                        </span>
+                                        <span
+                                            class="absolute size-6 lg:size-10 rounded-full top-2 right-2 text-[12px]/[150%] font-semibold bg-black text-white flex justify-center items-center">
+                                            30%
+                                        </span>
+                                    </div>
+                                    <div class="flex justify-between mb-2 lg:mb-3">
+                                        <ul class="flex items-center gap-x-[10px]">
+                                            <li
+                                                class="cursor-pointer size-4 text-white lg:size-[18px] rounded-full bg-black font-thin text-sm flex items-center justify-center">
+                                                <i class="fa-solid fa-check"></i>
+                                            </li>
+                                            <li
+                                                class="cursor-pointer size-4 text-white lg:size-[18px] rounded-full bg-black font-thin text-sm flex items-center justify-center">
+                                                <i class="fa-solid fa-check"></i>
+                                            </li>
+                                            <li
+                                                class="cursor-pointer size-4 text-white lg:size-[18px] rounded-full bg-black font-thin text-sm flex items-center justify-center">
+                                                <i class="fa-solid fa-check"></i>
+                                            </li>
+                                            <li
+                                                class="cursor-pointer size-4 text-white lg:size-[18px] rounded-full bg-black font-thin text-sm flex items-center justify-center">
+                                                <i class="fa-solid fa-check"></i>
+                                            </li>
+                                        </ul>
+                                        <span class=" cursor-pointer text-sm font-thin text-black ">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </span>
+                                    </div>
+                                    <a href="#"
+                                        class="block text-[12px]/[16px] lg:text-sm hover:text-rose-800 mb-2 lg:mb-[10px]">Sản
+                                        phẩm A</a>
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center gap-1">
+                                            <span class=" text-sm font-semibold text-dark lg:text-base">999.999đ</span>
+                                            <span
+                                                class=" text-[10px]/[150%] line-through lg:text-[12px]/[150%]">999.999đ</span>
+                                        </div>
+                                        <div class="relative btn-cart">
+                                            <button
+                                                class="card-add-to-cart size-5 text-[12px] border-dark border bg-dark rounded-tl-lg rounded-br-lg text-white transition duration-500 ease-in-out hover:bg-white lg:text-base hover:text-black lg:size-8">
+                                                <i class="fa-solid fa-cart-arrow-down"></i>
+                                            </button>
+                                            <ul
+                                                class="card-list-size w-[100px] absolute bottom-[35px] hidden transition-all duration-300 ease-in-out right-0 bg-white lg:w-[132px] border border-gray-200 z-10">
+                                                <li>
+                                                    <button
+                                                        class=" w-full text-sm py-2 text-dark font-semibold border border-white lg:text-base lg:py-3 hover:border-dark ">M</button>
+                                                </li>
+                                                <li>
+                                                    <button
+                                                        class=" w-full text-sm py-2 text-dark font-semibold border border-white lg:text-base lg:py-3 hover:border-dark ">L</button>
+                                                </li>
+                                                <li>
+                                                    <button
+                                                        class=" w-full text-sm py-2 text-dark font-semibold border border-white lg:text-base lg:py-3 hover:border-dark ">XL</button>
+                                                </li>
+                                                <li>
+                                                    <button
+                                                        class=" w-full text-sm py-2 text-dark font-semibold border border-white lg:text-base lg:py-3 hover:border-dark ">XXL</button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div>
+                                    <div class="h-[236px] lg:h-[350px] w-full relative overflow-hidden mb-4">
+                                        <a href="#" class="block w-full h-full">
+                                            <img src="./assets/images/products/ao1.jpg"
+                                                class="w-full h-full object-cover" alt="">
+                                        </a>
+                                        <span
+                                            class="absolute top-0 left-0 text-[12px]/[150%] font-semibold py-1 px-3 bg-rose-900 text-white rounded-br-full">
+                                            Best seller
+                                        </span>
+                                        <span
+                                            class="absolute size-6 lg:size-10 rounded-full top-2 right-2 text-[12px]/[150%] font-semibold bg-black text-white flex justify-center items-center">
+                                            30%
+                                        </span>
+                                    </div>
+                                    <div class="flex justify-between mb-2 lg:mb-3">
+                                        <ul class="flex items-center gap-x-[10px]">
+                                            <li
+                                                class="cursor-pointer size-4 text-white lg:size-[18px] rounded-full bg-black font-thin text-sm flex items-center justify-center">
+                                                <i class="fa-solid fa-check"></i>
+                                            </li>
+                                            <li
+                                                class="cursor-pointer size-4 text-white lg:size-[18px] rounded-full bg-black font-thin text-sm flex items-center justify-center">
+                                                <i class="fa-solid fa-check"></i>
+                                            </li>
+                                            <li
+                                                class="cursor-pointer size-4 text-white lg:size-[18px] rounded-full bg-black font-thin text-sm flex items-center justify-center">
+                                                <i class="fa-solid fa-check"></i>
+                                            </li>
+                                            <li
+                                                class="cursor-pointer size-4 text-white lg:size-[18px] rounded-full bg-black font-thin text-sm flex items-center justify-center">
+                                                <i class="fa-solid fa-check"></i>
+                                            </li>
+                                        </ul>
+                                        <span class=" cursor-pointer text-sm font-thin text-black ">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </span>
+                                    </div>
+                                    <a href="#"
+                                        class="block text-[12px]/[16px] lg:text-sm hover:text-rose-800 mb-2 lg:mb-[10px]">Sản
+                                        phẩm A</a>
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center gap-1">
+                                            <span class=" text-sm font-semibold text-dark lg:text-base">999.999đ</span>
+                                            <span
+                                                class=" text-[10px]/[150%] line-through lg:text-[12px]/[150%]">999.999đ</span>
+                                        </div>
+                                        <div class="relative btn-cart">
+                                            <button
+                                                class="card-add-to-cart size-5 text-[12px] border-dark border bg-dark rounded-tl-lg rounded-br-lg text-white transition duration-500 ease-in-out hover:bg-white lg:text-base hover:text-black lg:size-8">
+                                                <i class="fa-solid fa-cart-arrow-down"></i>
+                                            </button>
+                                            <ul
+                                                class="card-list-size w-[100px] absolute bottom-[35px] hidden transition-all duration-300 ease-in-out right-0 bg-white lg:w-[132px] border border-gray-200 z-10">
+                                                <li>
+                                                    <button
+                                                        class=" w-full text-sm py-2 text-dark font-semibold border border-white lg:text-base lg:py-3 hover:border-dark ">M</button>
+                                                </li>
+                                                <li>
+                                                    <button
+                                                        class=" w-full text-sm py-2 text-dark font-semibold border border-white lg:text-base lg:py-3 hover:border-dark ">L</button>
+                                                </li>
+                                                <li>
+                                                    <button
+                                                        class=" w-full text-sm py-2 text-dark font-semibold border border-white lg:text-base lg:py-3 hover:border-dark ">XL</button>
+                                                </li>
+                                                <li>
+                                                    <button
+                                                        class=" w-full text-sm py-2 text-dark font-semibold border border-white lg:text-base lg:py-3 hover:border-dark ">XXL</button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div>
+                                    <div class="h-[236px] lg:h-[350px] w-full relative overflow-hidden mb-4">
+                                        <a href="#" class="block w-full h-full">
+                                            <img src="./assets/images/products/ao1.jpg"
+                                                class="w-full h-full object-cover" alt="">
+                                        </a>
+                                        <span
+                                            class="absolute top-0 left-0 text-[12px]/[150%] font-semibold py-1 px-3 bg-rose-900 text-white rounded-br-full">
+                                            Best seller
+                                        </span>
+                                        <span
+                                            class="absolute size-6 lg:size-10 rounded-full top-2 right-2 text-[12px]/[150%] font-semibold bg-black text-white flex justify-center items-center">
+                                            30%
+                                        </span>
+                                    </div>
+                                    <div class="flex justify-between mb-2 lg:mb-3">
+                                        <ul class="flex items-center gap-x-[10px]">
+                                            <li
+                                                class="cursor-pointer size-4 text-white lg:size-[18px] rounded-full bg-black font-thin text-sm flex items-center justify-center">
+                                                <i class="fa-solid fa-check"></i>
+                                            </li>
+                                            <li
+                                                class="cursor-pointer size-4 text-white lg:size-[18px] rounded-full bg-black font-thin text-sm flex items-center justify-center">
+                                                <i class="fa-solid fa-check"></i>
+                                            </li>
+                                            <li
+                                                class="cursor-pointer size-4 text-white lg:size-[18px] rounded-full bg-black font-thin text-sm flex items-center justify-center">
+                                                <i class="fa-solid fa-check"></i>
+                                            </li>
+                                            <li
+                                                class="cursor-pointer size-4 text-white lg:size-[18px] rounded-full bg-black font-thin text-sm flex items-center justify-center">
+                                                <i class="fa-solid fa-check"></i>
+                                            </li>
+                                        </ul>
+                                        <span class=" cursor-pointer text-sm font-thin text-black ">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </span>
+                                    </div>
+                                    <a href="#"
+                                        class="block text-[12px]/[16px] lg:text-sm hover:text-rose-800 mb-2 lg:mb-[10px]">Sản
+                                        phẩm A</a>
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center gap-1">
+                                            <span class=" text-sm font-semibold text-dark lg:text-base">999.999đ</span>
+                                            <span
+                                                class=" text-[10px]/[150%] line-through lg:text-[12px]/[150%]">999.999đ</span>
+                                        </div>
+                                        <div class="relative btn-cart">
+                                            <button
+                                                class="card-add-to-cart size-5 text-[12px] border-dark border bg-dark rounded-tl-lg rounded-br-lg text-white transition duration-500 ease-in-out hover:bg-white lg:text-base hover:text-black lg:size-8">
+                                                <i class="fa-solid fa-cart-arrow-down"></i>
+                                            </button>
+                                            <ul
+                                                class="card-list-size w-[100px] absolute bottom-[35px] hidden transition-all duration-300 ease-in-out right-0 bg-white lg:w-[132px] border border-gray-200 z-10">
+                                                <li>
+                                                    <button
+                                                        class=" w-full text-sm py-2 text-dark font-semibold border border-white lg:text-base lg:py-3 hover:border-dark ">M</button>
+                                                </li>
+                                                <li>
+                                                    <button
+                                                        class=" w-full text-sm py-2 text-dark font-semibold border border-white lg:text-base lg:py-3 hover:border-dark ">L</button>
+                                                </li>
+                                                <li>
+                                                    <button
+                                                        class=" w-full text-sm py-2 text-dark font-semibold border border-white lg:text-base lg:py-3 hover:border-dark ">XL</button>
+                                                </li>
+                                                <li>
+                                                    <button
+                                                        class=" w-full text-sm py-2 text-dark font-semibold border border-white lg:text-base lg:py-3 hover:border-dark ">XXL</button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <span
+                        class=" arrival-prev hidden absolute z-[15] left-4 top-1/2 -translate-y-1/2 cursor-pointer  text-[#BCBDC0] text-3xl font-thin lg:block hover:text-dark">
+                        <i class="fa-solid fa-arrow-left-long"></i>
+                    </span>
+                    <span
+                        class="  arrival-next hidden absolute z-[15] right-4 top-1/2 -translate-y-1/2 cursor-pointer text-[#BCBDC0] text-3xl font-thin lg:block hover:text-dark">
+                        <i class="fa-solid fa-arrow-right-long"></i>
+                    </span>
+                </div>
+                <div class="w-max mx-auto mt-5">
+                    <a href="#" class="block">
+                        <span class=" btn-lg block  py-2 px-4 lg:py-3 lg:px-6 border border-dark">
+                            Xem tất cả
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="border-t border-gray-200">
+        <div class="container">
+            <div
+                class="flex flex-col w-full pt-[23px] pb-8 border-b border-gray-200 lg:pt-[60px]  lg:justify-between lg:flex-row ">
+                <div class="order-3 lg:max-w-[22.05%] w-full lg:order-1">
+                    <div class="mb-4">
+                        <a href="#" class="block">
+                            <img src="./assets/images/logo.png" class="w-[115px] object-contain" alt="">
+                        </a>
+                    </div>
+                    <div class="flex items-center gap-6 mb-8">
+                        <a href="#" class="block size-6 ">
+                            <span class="flex justify-center items-center  w-full h-full">
+                                <img src="./assets/icons/facebook.png" class="w-full object-cover" alt="">
+                            </span>
+                        </a>
+                        <a href="#" class="block size-6  ">
+                            <span class="flex justify-center items-center  w-full h-full">
+                                <img src="./assets/icons/instagram.jpg" class="w-full object-cover" alt="">
+                            </span>
+                        </a>
+                        <a href="#" class="block size-6 ">
+                            <span class="flex justify-center items-center  w-full h-full">
+                                <img src="./assets/icons/google.png" class="w-full object-cover" alt="">
+                            </span>
+                        </a>
+                        <a href="#" class="block size-6 ">
+                            <span class="flex justify-center items-center w-full h-full">
+                                <img src="./assets/icons/youtube.png" class="w-full object-cover" alt="">
+                            </span>
+                        </a>
+                    </div>
+                    <a href="#"
+                        class="block text-base text-white uppercase font-semibold px-6 py-3 border border-[#221F20] rounded-tl-lg rounded-br-lg bg-[#221F20] transition duration-300 ease-in-out text-center hover:text-black hover:bg-white ">
+                        Hotline: 0345.908.973
+                    </a>
+                </div>
+                <div
+                    class="order-2 mb-4  w-full flex flex-col lg:justify-between lg:flex-row lg:max-w-[45.2%] lg:mb-0 lg:order-2">
+                    <div>
+                        <div
+                            class="footer-information cursor-pointer flex justify-between lg:justify-normal lg:cursor-auto ">
+                            <h3 class="text-dark text-base mb-[14px] font-semibold lg: lg:text-2xl">Giới thiệu</h3>
+                            <span class="footer-infomation-icon lg:hidden"><i
+                                    class="fa-solid fa-chevron-right"></i></span>
+                        </div>
+                        <ul class="footer-infomation-content hidden lg:block mb-6 lg:mb-0">
+                            <li><a href="#" class="block text-sm mb-4 hover:text-dark">Về Mail-Shop</a></li>
+                            <li><a href="#" class="block text-sm mb-4 hover:text-dark">Tuyển dụng</a></li>
+                            <li><a href="#" class="block text-sm hover:text-dark">Hệ thống cửa hàng</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div
+                            class=" footer-information cursor-pointer flex justify-between lg:justify-normal lg:cursor-auto ">
+                            <h3 class="text-dark text-base mb-[14px] font-semibold lg:mb-5 lg:text-2xl">Dịch vụ khách
+                                hàng</h3>
+                            <span class="footer-infomation-icon lg:hidden"><i
+                                    class="fa-solid fa-chevron-right"></i></span>
+                        </div>
+                        <ul class="footer-infomation-content hidden lg:block mb-6 lg:mb-0">
+                            <li><a href="#" class="block text-sm mb-4 hover:text-dark">Chính sách điều khoản</a></li>
+                            <li><a href="#" class="block text-sm mb-4 hover:text-dark">Hướng dẫn mua hàng</a></li>
+                            <li><a href="#" class="block text-sm mb-4 hover:text-dark">Chính sách thanh toán</a></li>
+                            <li><a href="#" class="block text-sm mb-4 hover:text-dark">Chính sách đổi trả</a></li>
+                            <li><a href="#" class="block text-sm mb-4 hover:text-dark">Chính sách bảo hành</a></li>
+                            <li><a href="#" class="block text-sm mb-4 hover:text-dark">Chính sách giao nhận vận
+                                    chuyển</a></li>
+                            <li><a href="#" class="block text-sm mb-4 hover:text-dark">Chính sách thẻ thành viên</a>
+                            </li>
+                            <li><a href="#" class="block text-sm hover:text-dark">Q&A</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div
+                            class=" footer-information cursor-pointer flex justify-between lg:justify-normal lg:cursor-auto">
+                            <h3 class="text-dark text-base mb-[14px] font-semibold lg:mb-5 lg:text-2xl">Liên hệ</h3>
+                            <span class="footer-infomation-icon lg:hidden"><i
+                                    class="fa-solid fa-chevron-right"></i></span>
+                        </div>
+                        <ul class="footer-infomation-content hidden lg:block mb-6 lg:mb-0">
+                            <li><a href="#" class="block text-sm mb-4 hover:text-dark">Hotline</a></li>
+                            <li><a href="#" class="block text-sm mb-4 hover:text-dark">Email</a></li>
+                            <li><a href="#" class="block text-sm mb-4 hover:text-dark">Live Chat</a></li>
+                            <li><a href="#" class="block text-sm mb-4 hover:text-dark">Messenger</a></li>
+                            <li><a href="#" class="block text-sm hover:text-dark">Liên hệ</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class=" order-1 lg:max-w-[23.75%] w-full mb-8 lg:order-3">
+                    <div class="w-full px-4 py-6 border-[4px] rounded-tl-[56px] rounded-br-[56px] ">
+                        <h3 class="text-xl text-dark max-w-[80%] mb-2 font-semibold ">Nhận thông tin các chương trình
+                            của Mail Shop
+                        </h3>
+                        <form action="" class="flex border-b border-gray-200 rounded-br-3xl">
+                            <input type="text" placeholder="Nhập địa chỉ email"
+                                class="w-full text-sm pb-3 pr-[10px] outline-0 border-0">
+                            <button type="submit"
+                                class="flex-shrink-0 py-3 px-[27px] rounded-tl-3xl rounded-br-3xl text-base border border-gray-900 transition duration-300 ease-in-out hover:bg-dark hover:text-white">Đăng
+                                ký</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="py-6 lg:py-8">
+                <p class="text-center">&copy; Mail Shop All rights reserved</p>
+            </div>
+            <!-- Đệm cho phần navbar-mobile  -->
+            <div class="h-10 lg:hidden"></div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./main.js"></script>
+
+</body>
+
+</html>

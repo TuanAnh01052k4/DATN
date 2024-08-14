@@ -1,0 +1,258 @@
+@layer tailwind-base,reset, antd;
+
+@layer tailwind-base {
+  @tailwind base;
+  @import url(reset.css) layer(reset);
+}
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #6C6D70;
+}
+
+/* Đối với trình duyệt WebKit (Chrome, Safari) */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Đối với Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+@layer utilities {
+  .container {
+      @apply max-w-[1256px] px-[15px] mx-auto
+  }
+
+  .btn {
+      cursor: pointer;
+  }
+
+  .btn-sm {
+      border-radius: 8px 0;
+      @apply rounded-tl-lg rounded-br-lg
+  }
+
+  .btn-md {
+      border-radius: 16px 0;
+      @apply transition-all duration-300 ease-in-out rounded-tl-lg rounded-br-lg hover:bg-black hover:text-white
+  }
+
+  .btn-lg {
+
+      @apply transition-all duration-300 ease-in-out text-dark text-sm rounded-tl-lg rounded-br-lg lg:text-base lg:rounded-tl-3xl lg:rounded-br-3xl hover:bg-[#221F20] hover:text-white
+  }
+
+  .scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+  }
+
+  .scrollbar::-webkit-scrollbar {
+      display: none;
+  }
+
+  .footer-information .active i {
+      rotate: 90deg;
+      @apply transition-all duration-300 ease-in-out
+  }
+
+  .select-information .active i {
+      rotate: 90deg;
+      @apply transition-all duration-300 ease-in-out
+  }
+  .select-information .anactive i {
+    rotate: 0deg;
+    @apply transition-all duration-300 ease-in-out
+}
+  
+
+  .footer-infomation-icon i,
+  .select-icon i {
+      @apply transition-all duration-300 ease-in-out
+  }
+
+  .btn-cart .active {
+      @apply text-dark bg-white
+  }
+
+  .tabs-btn .active {
+      color: #221f20;
+      background: white;
+  }
+
+  .sub-menu,
+  .quicksearch {
+      animation: sub_menu 0.3s ease-in;
+  }
+
+  .card-list-size {
+      animation: card_list_size 0.3s ease-in;
+     
+  }
+
+  .active-lable{
+      @apply bg-black
+  }
+  .text .active {
+    @apply text-black
+  }
+
+  @keyframes sub_menu {
+      from {
+          transform: translateX(10px);
+          opacity: 0;
+      }
+
+      to {
+          transform: translateX(0);
+          opacity: 1;
+      }
+  }
+
+  @keyframes card_list_size {
+      from {
+          bottom: 0;
+          opacity: 0;
+
+      }
+
+      to {
+          bottom: 35px;
+          opacity: 1;
+
+          @media (max-width:576px) {
+              bottom: 25px;
+          }
+      }
+  }
+
+  @media (max-width: 576px) {
+      .menu {
+          animation: toBlock 0.3s ease-in-out;
+      }
+
+      .menu-item,
+      .close-menu {
+          animation: toRight 0.3s ease-in;
+      }
+
+      .search-wrapper {
+          animation: toBlock 0.3s ease-in-out;
+      }
+
+      .menu-animation-top,
+      .footer-infomation-content {
+          animation: toTop 0.3s ease-in;
+      }
+
+      .formChangePass {
+          animation: toBlock 0.3s ease-in;
+      }
+  }
+  @keyframes toRight {
+    from {
+        transform: translateX(-10px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes toBlock {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes toTop {
+    from {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+}
+/* ----------------------------------------------products----------------------------------- */
+.highlighted {
+    border-color: #000;
+    font-weight: bold;
+}
+
+.color-btn i {
+    font-size: 12px;
+}
+
+
+.dropdown {
+    display: inline-block;
+  }
+
+  /* .dropbtn {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    cursor: pointer;
+  } */
+
+
+
+  /* .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 10px;
+  } */
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    font-weight: bold;
+    background-color: #f1f1f1;
+  }
+
+  .show {
+    display: block;
+  }
+
+  .fa-check:before{
+    margin-left: 0px;
+    margin-top: -1px;
+  }
+
+  /* -----------------------------------productdetails------------------------------- */
+  .swiper-button-next{
+    color: #6C6D70;
+    font-weight: 800;
+  }
+
+  .swiper-button-prev{
+    color: #6C6D70;
+    font-weight: 800;
+  }

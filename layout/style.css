@@ -1,0 +1,179 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: "Montserrat", sans-serif;
+    color: #6C6D70;
+}
+
+/* Đối với trình duyệt WebKit (Chrome, Safari) */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Đối với Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+@layer utilities {
+    .container {
+        @apply max-w-[1256px] px-[15px] mx-auto
+    }
+
+    .btn {
+        cursor: pointer;
+    }
+
+    .btn-sm {
+        border-radius: 8px 0;
+        @apply rounded-tl-lg rounded-br-lg
+    }
+
+    .btn-md {
+        border-radius: 16px 0;
+        @apply transition-all duration-300 ease-in-out rounded-tl-lg rounded-br-lg hover:bg-black hover:text-white
+    }
+
+    .btn-lg {
+
+        @apply transition-all duration-300 ease-in-out text-dark text-sm rounded-tl-lg rounded-br-lg lg:text-base lg:rounded-tl-3xl lg:rounded-br-3xl hover:bg-[#221F20] hover:text-white
+    }
+
+    .scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .footer-information .active i {
+        rotate: 90deg;
+        @apply transition-all duration-300 ease-in-out
+    }
+
+    .select-information .active i {
+        rotate: 90deg;
+        @apply transition-all duration-300 ease-in-out
+    }
+
+    .footer-infomation-icon i,
+    .select-icon i {
+        @apply transition-all duration-300 ease-in-out
+    }
+
+    .btn-cart .active {
+        @apply text-dark bg-white
+    }
+
+    .tabs-btn .active {
+        color: #221f20;
+        background: white;
+    }
+
+    .sub-menu,
+    .quicksearch {
+        animation: sub_menu 0.3s ease-in;
+    }
+
+    .card-list-size {
+        animation: card_list_size 0.3s ease-in;
+       
+    }
+
+    .active-lable{
+        @apply bg-black
+    }
+
+    @keyframes sub_menu {
+        from {
+            transform: translateX(10px);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes card_list_size {
+        from {
+            bottom: 0;
+            opacity: 0;
+
+        }
+
+        to {
+            bottom: 35px;
+            opacity: 1;
+
+            @media (max-width:576px) {
+                bottom: 25px;
+            }
+        }
+    }
+
+    @media (max-width: 576px) {
+        .menu {
+            animation: toBlock 0.3s ease-in-out;
+        }
+
+        .menu-item,
+        .close-menu {
+            animation: toRight 0.3s ease-in;
+        }
+
+        .search-wrapper {
+            animation: toBlock 0.3s ease-in-out;
+        }
+
+        .menu-animation-top,
+        .footer-infomation-content {
+            animation: toTop 0.3s ease-in;
+        }
+
+        .formChangePass {
+            animation: toBlock 0.3s ease-in;
+        }
+
+        @keyframes toRight {
+            from {
+                transform: translateX(-10px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes toBlock {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes toTop {
+            from {
+                transform: translateY(10px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    }
+}
